@@ -1,0 +1,14 @@
+
+/*css模块化只针对类名选择器和ID选择器生效*/
+
+.item{
+     background: rgba(0,0,0,0.2);
+ }
+
+#haha{
+    color:red;
+}
+
+.test{
+    font-style: italic;
+}
