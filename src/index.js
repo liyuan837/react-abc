@@ -2,6 +2,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import bootcss from 'bootstrap/dist/css/bootstrap.css'
+
 //导入 Hello 组件，
 import CommentList from '@/components/comment/CommentList'
 const data = [

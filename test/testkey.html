@@ -27,6 +27,26 @@
                 {id:1,name:'李袁'}
             ]
         },
+        beforeCreate:function(){
+            console.log("before")
+        },
+
+        created:function(){
+            console.log('created')
+        },
+
+        beforeMount:function(){
+            console.log('beforeMount')
+        },
+
+        mounted:function(){
+            console.log('mounted')
+        },
+
+        updated:function(){
+            console.log('updated')
+        },
+
         methods:{
             add(){
                 var newUser = {id:this.list.length,name:this.uname};

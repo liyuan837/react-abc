@@ -4,7 +4,7 @@ import CommentItem from '@/components/comment/CommentItem'
 //导入bootstrap样式
 //规定：第三方 样式表 都是 .css结尾的，自己的样式表都要以.scss 或者 .less结尾
 //这样，我们不用为 普通的.css文件启用模块化， 只为.scss或 .less文件启用模块化
-import bootcss from 'bootstrap/dist/css/bootstrap.css'
+
 
 import objcss from '@/styles/CommentList.scss'
 
@@ -14,17 +14,17 @@ class CommentList extends React.Component{
         super(props)
         this.state = {
             data:props.data,
-            inputValue:'',
-            id:''
+            inputValue:''
         }
 
     }
 
     handleClick = () => {
+        var id = new Date().getTime()
         var content = this.state.inputValue
         var item = {
-            id:new Date().getTime(),
-            user:'李袁',
+            id:id,
+            user:'李袁'+id,
             content:content
         }
         this.setState({
@@ -40,10 +40,10 @@ class CommentList extends React.Component{
         console.log(this.state)
     }
 
-    handleDelete=(id) => {
-        console.log(id)
+    handleDelete=(deleteId,msg) => {
+        console.log(msg+"==="+deleteId)
         for(var i=0;i<this.state.data.length;i++){
-            if(id == this.state.data[i].id){
+            if(deleteId == this.state.data[i].id){
                 this.state.data.splice(i,1)
             }
         }

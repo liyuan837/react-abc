@@ -11,7 +11,7 @@ class CommentItem extends React.Component{
     }
 
     handleDelete = ()=>{
-        this.props.handleDelete(this.props.data.id);
+        this.props.handleDelete(this.props.data.id,"shanchu");
     }
 
     render(){
@@ -19,7 +19,7 @@ class CommentItem extends React.Component{
             <li className={[cssObj.item , cssObj.test].join(' ')} style={{border:'dotted 1px black',marginTop:'10px',padding:'10px',boxShadow:'gray 1px 1px 5px',position:'relative'}}>
                 <div id={cssObj.haha} style={{fontWeight:'bold'}}>用户：{this.props.data.user}</div>
                 <div style={{fontSize:12,color:'#666',marginTop:'5px'}}>内容：{this.props.data.content}</div>
-                <i className="glyphicon glyphicon-remove-sign" onClick={this.handleDelete}></i>
+                <i className={["glyphicon glyphicon-remove-sign",cssObj.deleteItem].join(' ')} onClick={this.handleDelete}></i>
             </li>
         )
     }

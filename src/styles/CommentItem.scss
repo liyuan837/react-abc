@@ -11,4 +11,14 @@
 
 .test{
     font-style: italic;
+    position: relative;
+}
+
+
+.deleteItem{
+  position:absolute;
+  top:50%;
+  right:10px;
+  transform: translateY(-50%);
+  font-size:20px;
 }
